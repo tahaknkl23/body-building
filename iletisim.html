@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Sitesi-İletişim</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #bbb9b9;
+      }
+
+      header {
+        position: relative;
+        background-size: 100% 100%;
+        color: #fff;
+        text-align: center;
+        padding: 3em;
+        background-image: url("resimler/fitness.png");
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1em;
+      }
+
+      section {
+        padding: 2em;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Vücut Geliştirme Programı</h1>
+      <p>Sağlıklı bir yaşam ve güçlü bir vücut için</p>
+    </header>
+
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="AntrenmanProgramları.html">Antrenman Programları</a>
+      <a href="Beslenme.html">Beslenme</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="Hakkımda.html">Hakkımda</a>
+    </nav>
+
+    <section>
+      <form>
+        <label for="isim"><b>İsim Soyisim:</b></label>
+        <input type="text" id="isim" name="isim" required>
+
+        <label for="telno"><b>Telefon Numarası:</b></label>
+        <input type="tel" id="phoneNumber" name="telno" required>
+
+        <label for="email"><b>E-Mail:</b></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mesaj"><b>Mesajınız:</b></label>
+        <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
+
+        <button type="submit">Gönder</button>
+        <button type="reset">Temizle</button>
+      </form>
+    </section>
+
+    <footer >
+      <p><ins>Bize Ulaşmak için<br><br></ins><b>İsim Soyisim:</b> Hasan Taha Künkül | <b>Telefon:</b> 0507004****| <b>E-Mail:</b> tahaknkl2323@gmail.com</p>
+    </footer>
+  </body>
+</html>

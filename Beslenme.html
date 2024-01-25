@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Sitesi-Beslenme</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #bbb9b9;
+      }
+
+      header {
+        position: relative;
+        background-size: 100% 100%;
+        color: #fff;
+        text-align: center;
+        padding: 3em;
+        background-image: url("resimler/fitness.png");
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1em;
+      }
+
+      section {
+        padding: 2em;
+      }
+
+      .nutrition-section {
+        text-align: center;
+        margin: 20px;
+      }
+
+      .nutrition-section img {
+        width: 30%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Vücut Geliştirme Programı</h1>
+      <p>Sağlıklı bir yaşam ve güçlü bir vücut için</p>
+    </header>
+
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="AntrenmanProgramları.html">Antrenman Programları</a>
+      <a href="Beslenme.html">Beslenme</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="Hakkımda.html">Hakkımda</a>
+    </nav>
+    
+
+    <section>
+      <div class="nutrition-section" id="karbonhidratlar">
+        <h2>Karbonhidratlar</h2>
+        <img src="resimler/karbonhidratlar.jpg" alt="Karbonhidratlar">
+        <p>
+          <b><i><ins>Karbonhidratlar</ins> vücudun enerji ihtiyacını karşılar.<br> İyi bir antrenmanın
+          ardından enerji depolarını doldurmak için önemlidir. İyi kaynaklar
+          arasında tam tahıllar, sebzeler ve meyveler bulunmaktadır.</b></i>
+        </p>
+      </div>
+
+      <div class="nutrition-section" id="proteinler">
+        <h2>Proteinler</h2>
+        <img src="resimler/protein.jpg" alt="Proteinler">
+        <p>
+          <b><i><ins>Proteinler</ins>, egzersiz yapan kişiler için proteinin en önemli görevi; kas yapımı ve onarımıdır.<br>
+          Süt ve süt ürünleri, et, yumurta, balık, tavuk gibi hayvansal ürünlerden ve kurubaklagil kaynaklarından protein ihtiyacı karşılanabilir.</i></b>
+        </p>
+      </div>
+
+      <div class="nutrition-section" id="yaglar">
+        <h2>Yağlar</h2>
+        <img src="resimler/yag.jpg" alt="Yağlar">
+        <p>
+          <b><i><ins>Yağlar</ins> vücudumuzda ve beslenmemizde önemli bir rol oynar. Vücut yağı, yalıtımı sağlar, darbelere karşı korur ve enerji rezervidir.<br>
+          Besinsel yağ ise enerjiyi, temel yağ asitlerini ve yağda eriyen vitaminleri sağlar. Sağlıklı bir vücudun makul ölçüde bir yağ düzeyi olmalıdır.</b></i>
+          </p>
+      </div>
+
+      <!-- Input form for height and weight -->
+      <div>
+        <h3>Hesaplama için Bilgilerinizi Giriniz:</h3>
+        <label for="height">Boy (cm):</label>
+        <input type="number" id="height" />
+        <br />
+        <label for="weight">Kilo (kg):</label>
+        <input type="number" id="weight" />
+        <br />
+        <button onclick="calculateNutrition()">Hesapla</button>
+      </div>
+
+      <!-- Display calculated nutrition information -->
+      <div id="calculatedNutrition">
+        <h4><i><ins>Hesaplanan Beslenme Miktarları:</ins></i></h4>
+        <p id="calculatedCarbs"></p>
+        <p id="calculatedProteins"></p>
+        <p id="calculatedFats"></p>
+      </div>
+    </section>
+
+    <script>
+      function calculateNutrition() {
+        // Get user input
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+
+        // Perform your calculation logic here
+        // For demonstration purposes, let's assume simple calculations
+        var calculatedCarbs = Math.round(weight * 2); // Replace with actual calculation
+        var calculatedProteins = Math.round(weight * 1.5); // Replace with actual calculation
+        var calculatedFats = Math.round(weight * 0.7); // Replace with actual calculation
+
+        // Display calculated nutrition information
+        document.getElementById("calculatedCarbs").innerText = "Karbonhidratlar: " + calculatedCarbs + " gram";
+        document.getElementById("calculatedProteins").innerText = "Proteinler: " + calculatedProteins + " gram";
+        document.getElementById("calculatedFats").innerText = "Yağlar: " + calculatedFats + " gram";
+      }
+    </script>
+    <br> <br> <br> <br>
+    <footer>
+      <p>&copy; 2023 Vücut Geliştirme Programı</p>
+    </footer>
+  </body>
+</html>

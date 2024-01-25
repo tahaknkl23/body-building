@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Sitesi-Programlar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bbb9b9;
+        }
+
+        header {
+            position: relative;
+            background-size: 100% 100%;
+            color: #fff;
+            text-align: center;
+            padding: 3em;
+            background-image: url("resimler/fitness.png");
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        .training-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+        }
+
+        .training-option {
+            text-align: center;
+            margin: 10px;
+            cursor: pointer;
+            width: 320px; /* Aynı genişlikte resimler için */
+            overflow: hidden; /* Resimden taşan içerikleri gizleme */
+            position: relative; /* Gölgelendirme efekti için gerekli */
+        }
+
+        .training-option img {
+            width: 100%; /* Resimlerin container içinde tamamen görünmesi için */
+            border-radius: 8px; /* İsteğe bağlı: resim kenarlarını yuvarlamak için */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Resim ve gölgelendirme animasyonları */
+            
+        }
+        .training-option:hover img {
+            transform: scale(0.9); /* Resmin boyutunu büyütme animasyonu hover durumunda */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme efekti */
+        }
+
+        .program-details {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vücut Geliştirme Programı</h1>
+        <p>Sağlıklı bir yaşam ve güçlü bir vücut için</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="AntrenmanProgramlari.html">Antrenman Programları</a>
+        <a href="Beslenme.html">Beslenme</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="Hakkımda.html">Hakkımda</a>
+    </nav>
+
+    <section>
+        
+        <div class="training-options">
+            <div class="training-option" onclick="navigateToProgram('sirt')">
+                <img src="resimler/sırt.jpg" alt="Sırt Antrenmanı">
+                <h3>Sırt Antrenmanı</h3>
+                <p>Esas görevi vücudun dik durmasına katkı sağlamak olan sırt kasları aynı zamanda baş ile omurga bölümlerinin de sağlıklı ve birbiri ile uyumlu hareket etmesini kolay hale getirir. 
+                Sırt kaslarının güçlü olması, günlük yaşam içerisinde yapılan aktivitelerin daha kolay ve pratik bir şekilde gerçekleştirilmesini sağlar ve sırt ağrısı riskini büyük oranda azaltır.</p>
+            </div>
+            <div class="training-option" onclick="navigateToProgram('gogus')">
+                <img src="resimler/gogus.jpg" alt="Göğüs Antrenmanı">
+                <h3>Göğüs Antrenmanı</h3>
+                <p>Vücut geliştiren insanlar için göğüs egzersizleri vazgeçilmezdir. Bunun yanı sıra düzgün bir postür için de olmazsa olmaz nitelikteki 
+                    bu kas grubu estetik görünüşü önemseyen herkes için çalışmaktan kaçınılamayacak bir bölgedir.
+                    İdealize edilmiş insan vücuduna ulaşmanın yolu daha geniş bir göğüs hattına sahip olarak beli daha ince göstermekten geçer.
+                    Ayrıca daha iyi bir vücut stabilizasyonu, kolun iç rotasyonunu desteklemek ve solunuma yardımcı olmak için de göğüs kasları geliştirilmelidir.</p>
+            </div>
+            <div class="training-option" onclick="navigateToProgram('bacak')">
+                <img src="resimler/bacak.jpg" alt="Bacak Antrenmanı">
+                <h3>Bacak Antrenmanı</h3>
+                <p>Bacak kasları, hem görsel açıdan hem de vücut sağlığı açısından büyük öneme sahiptir. Bacak kaslarınızın vücudunuza bir çok yönden faydası bulunmaktadır.
+                Vücudunuzda bacak kaslarınıza stres yüklediğinizde, kas lifleri yırtılır. Sonrasında, dinlenme döneminde bu lifler, daha büyük ve daha güçlü bir şekilde büyür.
+                Ardından daha güçlü, daha kaslı bacaklarla sonuçlanmaktadır. </p>
+            </div>
+            <div class="training-option" onclick="navigateToProgram('omuz')">
+                <img src="resimler/omuz.jpg" alt="Omuz Antrenmanı">
+                <h3>Omuz Antrenmanı</h3>
+                <p>Kasların güçlenmesini sağlayan omuz hareketleri ile omuzların daha geniş görünmesini sağlayabilir, hacimli bir üst vücut görünümüne sahip olabilirsiniz. 
+                    Omuz antrenmanı, aynı zamanda omuz ekleminin güçlenmesini de sağlayarak kol, sırt ve göğüs antrenmanlarındaki performansı da artırabilir.</p>
+            </div>
+            <div class="training-option" onclick="navigateToProgram('kol')">
+                <img src="resimler/kol.jpg" alt="Kol Antrenmanı">
+                <h3>Kol Antrenmanı</h3>
+                <p>Kol kasları vücut geliştirme ve fitness ile ilgilenen kişiler için (özellikle erkekler) en popüler kas gruplarından birisidir. 
+                    Kol kasları önde ve arkada olmak üzere çeşitli bölümlere ayrılmaktadır.
+                    Bunlar kolumuzun önünde bulunan biceps brachii, brachialis ve brachioradalis kasları ile kolumuzun arka kısmında yer alan triceps brachii kasından oluşmaktadır.
+                    Bu kaslardan biceps brachii adından da anlaşılacağı üzere iki farklı başa, triceps brachii ise üç farklı başa sahiptir.  </p>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Vücut Geliştirme Programı</p>
+    </footer>
+
+    <script>
+        function navigateToProgram(programType) {
+            // Yönlendirme işlemi
+            window.location.href = programType + ".html";
+        }
+    </script>
+</body>
+</html>

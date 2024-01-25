@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Sitesi</title>
+    <style>
+        /* Diğer stillendirmeler buraya eklenir */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bbb9b9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            position: relative;
+            background-size: 100% 100%;
+            color: #fff;
+            text-align: center;
+            padding: 3em; /* Daha fazla boşluk eklemek için padding ayarlandı */
+            background-image: url("resimler/fitness.png");
+            width: 100%;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        section {
+            padding: 2em;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: rgb(95, 61, 61);">Vücut Geliştirme Programı</h1>
+        <p  style="color: rgb(95, 61, 61);">Sağlıklı bir yaşam ve güçlü bir vücut için</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="AntrenmanProgramları.html">Antrenman Programları</a>
+        <a href="Beslenme.html">Beslenme</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="Hakkımda.html">Hakkımda</a>
+    </nav>
+
+    <section>
+        <iframe src="frame1.html" width="48%" height="500px" frameborder="0"></iframe>
+        <iframe src="frame2.html" width="48%" height="500px" frameborder="0"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Vücut Geliştirme Programı</p>
+    </footer>
+</body>
+</html>
